@@ -10,16 +10,24 @@
 Contacts = []
 
 # "Your program should allow users to add, view, and search for contacts." <- This part of the Assignment Details tells me that the input() function needs to be used in order to add a new contact, phone number, and email:
-
 name = input("Please enter the name of your contact: ")
 phone = input("Please enter the phone number of your contact: ")
 email = input("Please enter the email of your contact: ")
 
 # Now I have to add these values to a dictionary
-
-New_contact = {'name' : name, 'phone' : phone, 'email' : email}
+new_contact = {'name' : name, 'phone' : phone, 'email' : email}
 print(New_contact)
 
 # Now I need to add New_Contact to the list of empty contacts for every contact that is added. I am thinking some sort of 'for loop' will accomplish this. 
 Contacts.append(New_contact)
 print(Contacts)
+
+# Instructions from README for reference: 
+# Implement a function called add_contact() that takes user input to add a new contact to the contacts list. Ensure that each contact has a unique name.
+# Implement a function called view_contacts() that displays the list of all contacts in a user-friendly format.
+# Implement a function called search_contact() that takes a name as input and searches for the contact by name. If found, display the contact's details. If not found, display a message indicating that the contact was not found.
+
+# Reading these instructions gives me a nice skeleton/roadmap to work with:
+# def add_contact():
+# def view_contacts():
+# def search_contacts():
