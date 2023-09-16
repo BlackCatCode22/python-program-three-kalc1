@@ -17,6 +17,17 @@ request = input()
 
 Contacts = []
 
+def add_contact(): 
+    name = input("Please enter the name of your contact: ")
+    if name == new.contact['name']:
+        print("That contact already exists. Please enter a different name.")
+        add_contacts()
+    else:
+        phone = input("Please enter the phone number of your contact: ")
+        email = input("Please enter the email of your contact: ")
+        new_contact = {'name' : name, 'phone' : phone, 'email' : email}
+        Contacts.append(new_contact)
+
 if request == "1":
     add_contact()
 elif request == "2":
@@ -37,16 +48,17 @@ else:
 
 # I already figured out how to add a new contact so I just definined it below. I also added an else-if statement to check if the name has already been entered into the system to ensure each contact has a unique name. 
 # # "Your program should allow users to add, view, and search for contacts." <- This part of the Assignment Details tells me that the input() function needs to be used in order to add a new contact, phone number, and email:
-def add_contact(): 
-    name = input("Please enter the name of your contact: ")
-    if name == new.contact['name']
-        print("That contact already exists. Please enter a different name.")
-        add_contacts()
-    else:
-    phone = input("Please enter the phone number of your contact: ")
-    email = input("Please enter the email of your contact: ")
-    new_contact = {'name' : name, 'phone' : phone, 'email' : email}
-    Contacts.append(new_contact)
+# def add_contact(): 
+    #name = input("Please enter the name of your contact: ")
+    #if name == new.contact['name']:
+    #    print("That contact already exists. Please enter a different name.")
+    #    add_contacts()
+    #else:
+    #    phone = input("Please enter the phone number of your contact: ")
+    #    email = input("Please enter the email of your contact: ")
+    #    new_contact = {'name' : name, 'phone' : phone, 'email' : email}
+    #    Contacts.append(new_contact) 
+    # ^^^ this entire function was moved to the top once I ran the code and realized this needed to run before the main if-then-else structure
 
 # Now I have to add these values to a dictionary
 # new_contact = {'name' : name, 'phone' : phone, 'email' : email}
