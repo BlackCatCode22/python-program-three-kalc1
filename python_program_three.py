@@ -15,6 +15,8 @@ request = input()
 # Here is how the if-then-else structure should more or less look like. I have not defined these values yet but now I atleast have the structure how this program will run/be organized. I also added an exit message so the user knows they have 
 # exited the program. The message that is prompted in case anything other than a 1,2,3, or 4 prompts the user to repeat their request and takes them back to the beginning.
 
+Contacts = []
+
 if request == "1":
     add_contact()
 elif request == "2":
@@ -31,20 +33,29 @@ else:
 # I started with an empty list called Contacts. I then wrote out this example below of what a contact should look like:
 # Example of a contact: Kevin = {name : Kevin, phone : 714714, email: 714@scccd.edu} <--- these data values need to be input by users
 
-Contacts = []
+# Contacts = [] <--- I moved this to the beginning of the if-then-else structure so it would run before anything is done with it.
 
-# "Your program should allow users to add, view, and search for contacts." <- This part of the Assignment Details tells me that the input() function needs to be used in order to add a new contact, phone number, and email:
-name = input("Please enter the name of your contact: ")
-phone = input("Please enter the phone number of your contact: ")
-email = input("Please enter the email of your contact: ")
+# I already figured out how to add a new contact so I just definined it below. I also added an else-if statement to check if the name has already been entered into the system to ensure each contact has a unique name. 
+# # "Your program should allow users to add, view, and search for contacts." <- This part of the Assignment Details tells me that the input() function needs to be used in order to add a new contact, phone number, and email:
+def add_contact(): 
+    name = input("Please enter the name of your contact: ")
+    if name == new.contact['name']
+        print("That contact already exists. Please enter a different name.")
+        add_contacts()
+    else:
+    phone = input("Please enter the phone number of your contact: ")
+    email = input("Please enter the email of your contact: ")
+    new_contact = {'name' : name, 'phone' : phone, 'email' : email}
+    Contacts.append(new_contact)
 
 # Now I have to add these values to a dictionary
-new_contact = {'name' : name, 'phone' : phone, 'email' : email}
+# new_contact = {'name' : name, 'phone' : phone, 'email' : email}
 # print(new_contact)
 
 # Now I need to add New_Contact to the list of empty contacts for every contact that is added. I am thinking some sort of 'for loop' will accomplish this. 
-Contacts.append(new_contact)
-print(Contacts)
+# Contacts.append(new_contact)
+
+# print(Contacts)
 
 # Instructions from README for reference: 
 # Implement a function called add_contact() that takes user input to add a new contact to the contacts list. Ensure that each contact has a unique name.
