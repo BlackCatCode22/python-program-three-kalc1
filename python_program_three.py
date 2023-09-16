@@ -4,6 +4,13 @@
 # Date: 09/13/23
 # Class: CIT 95
 
+# I modeled the text after a basic customer service robot you hear on the phone. The plan is to use a if-then-else structure as shown in module 6. I defined the second line as "prompt" since I figure I will need to keep referencing that, 
+# but not the welcome message as that should only print() at the beginning. 
+
+print("Welcome to the python_program_three contact management system.") 
+prompt = print("Please press 1 if you would like to add a new contact. Press 2 if you would like to view all current contacts. Press 3 if you would like to search for a contact by name. Else, press 4 to exit.")
+prompt
+
 # I started with an empty list called Contacts. I then wrote out this example below of what a contact should look like:
 # Example of a contact: Kevin = {name : Kevin, phone : 714714, email: 714@scccd.edu} <--- these data values need to be input by users
 
@@ -16,10 +23,10 @@ email = input("Please enter the email of your contact: ")
 
 # Now I have to add these values to a dictionary
 new_contact = {'name' : name, 'phone' : phone, 'email' : email}
-print(New_contact)
+# print(new_contact)
 
 # Now I need to add New_Contact to the list of empty contacts for every contact that is added. I am thinking some sort of 'for loop' will accomplish this. 
-Contacts.append(New_contact)
+Contacts.append(new_contact)
 print(Contacts)
 
 # Instructions from README for reference: 
