@@ -19,14 +19,11 @@ Contacts = []
 
 def add_contact(): 
     name = input("Please enter the name of your contact: ")
-    if name == new.contact['name']:
-        print("That contact already exists. Please enter a different name.")
-        add_contacts()
-    else:
-        phone = input("Please enter the phone number of your contact: ")
-        email = input("Please enter the email of your contact: ")
-        new_contact = {'name' : name, 'phone' : phone, 'email' : email}
-        Contacts.append(new_contact)
+    phone = input("Please enter the phone number of your contact: ")
+    email = input("Please enter the email of your contact: ")
+    new_contact = {'name' : name, 'phone' : phone, 'email' : email}
+    Contacts.append(new_contact)
+    print(new_contact['name'] + " has been added to your contacts.")
 
 if request == "1":
     add_contact()
