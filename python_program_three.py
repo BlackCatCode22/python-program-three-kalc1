@@ -10,6 +10,23 @@
 print("Welcome to the python_program_three contact management system.") 
 prompt = print("Please press 1 if you would like to add a new contact. Press 2 if you would like to view all current contacts. Press 3 if you would like to search for a contact by name. Else, press 4 to exit.")
 prompt
+request = input()
+
+# Here is how the if-then-else structure should more or less look like. I have not defined these values yet but now I atleast have the structure how this program will run/be organized. I also added an exit message so the user knows they have 
+# exited the program. The message that is prompted in case anything other than a 1,2,3, or 4 prompts the user to repeat their request and takes them back to the beginning.
+
+if request == "1":
+    add_contact()
+elif request == "2":
+    view_contacts()
+elif request == "3":
+    search_contact()
+elif request == "4":
+    print("Thank you for using the python_program_three contact management system! Goodbye.")
+else:
+    print("I'm sorry, I didn't understand that input.")
+    prompt
+
 
 # I started with an empty list called Contacts. I then wrote out this example below of what a contact should look like:
 # Example of a contact: Kevin = {name : Kevin, phone : 714714, email: 714@scccd.edu} <--- these data values need to be input by users
