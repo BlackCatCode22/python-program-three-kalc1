@@ -30,10 +30,11 @@ def add_contact():
         print("I'm sorry, I didn't understand that input.")  
         add_another = input("Would you like to add another contact? Enter yes or no. ")
  
-# I first started with simply printing out the list of Contacts. It wasn't very readable as it simply printed out the information in a dictionary format.
+# I first started with simply printing out the list of Contacts. It wasn't very readable as it simply printed out the information in a dictionary format. My first attempt at listing all the contacts in a more readable format will use iteration. 
     
 def view_contacts():
-    print(Contacts)
+    for i in Contacts:
+        print(i['name'])
     
 #def search_contacts():
 
