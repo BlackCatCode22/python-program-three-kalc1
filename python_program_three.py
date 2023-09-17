@@ -35,8 +35,14 @@ def add_contact():
 def view_contacts():
     for i in Contacts:
         print(i['name'])
+ 
+# My first instinct is to use iteration again as in the view_contacts() function but instead of just printing each name as it cycles through the list, the program will only print out names and their email/phone number if it matches the user's input.
+def search_contacts():
     
-#def search_contacts():
+    for i in Contacts:
+        
+    
+    
 
 def main_menu():
     if prompt == "1":
