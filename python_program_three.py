@@ -10,6 +10,7 @@
 # Here is how the if-then-else structure should more or less look like. I have not defined these values yet but now I atleast have the structure how this program will run/be organized. I also added an exit message so the user knows they have 
 # exited the program. The message that is prompted in case anything other than a 1,2,3, or 4 prompts the user to repeat their request and takes them back to the beginning.
 # I added an option to add another contact.
+# Using the same logic from the while loop controlling the main menu, I was able to re-direct the user back to the main menu after choosing no or prompting them to continue adding another contact incase of an invalid input. 
 
 Contacts = []
 
@@ -24,9 +25,10 @@ def add_contact():
     if add_another == "yes":
         add_contact()
     elif add_another == "no":
-        main_menu()
+        print("Returning to main menu:")
     else:
         print("I'm sorry, I didn't understand that input.")  
+        add_another = input("Would you like to add another contact? Enter yes or no. ")
     
 def view_contacts():
     Contacts
