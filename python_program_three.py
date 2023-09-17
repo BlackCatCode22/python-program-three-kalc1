@@ -28,8 +28,8 @@ def add_contact():
         print("Returning to main menu:")
     else:
         print("I'm sorry, I didn't understand that input.")  
-        add_another = input("Would you like to add another contact? Enter yes or no. ")
- 
+        print("Returning to main menu:")
+         
 # I first started with simply printing out the list of Contacts. It wasn't very readable as it simply printed out the information in a dictionary format. My first attempt at listing all the contacts in a more readable format will use iteration. 
     
 def view_contacts():
@@ -52,6 +52,7 @@ def search_contact():
             print(i['email'])
     else: 
         print("That contact is not in your contacts list")
+        print("Returning to main menu:")
          
               
              
