@@ -40,22 +40,24 @@ def view_contacts():
 # My first attempt did not work because it ended up printing both the contact info and the "that contact does not exist." given from the "else." I think this is because the function is still cycling even after outputting the information.
 # I fixed the issue using boolean variables to check if a name is on the list and basing the output on whether true or false. However when I tested this twice, the originally printed output does not change to match what the user is searching for.
 # I need to find a way to change the output to match what the user is searching for. 
+# I merged what I had previously writtem in the search_contacts() function with my updated version. I went back into github to look at a previous version since that part of the code I wrote was working (atleast in one way). I found a way to ensure
+# the output matches the user's input using another for loop nested inside an if-statement. The inner for loop comes from my previously written code that I thought wasn't working as intended. 
 def search_contact():
     search_name = input("Please type the name of the contact you are searching for: ")
     in_list = False
     for i in Contacts:
         if search_name == i['name']:
             in_list = True
-    if in_list:            
-            print(i['name'] + " is currently in your contacts list with the following phone number and email:")
-            print(i['phone'])
-            print(i['email'])
+    if in_list:  
+        for i in Contacts:
+            if search_name == i['name']:
+                print(i['name'] + " is currently in your contacts list with the following phone number and email:")
+                print(i['phone'])
+                print(i['email'])            
     else: 
         print("That contact is not in your contacts list")
         print("Returning to main menu:")
-         
-              
-             
+                                  
 def main_menu():
     if prompt == "1":
         add_contact()
