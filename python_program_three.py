@@ -38,6 +38,8 @@ def view_contacts():
  
 # My first instinct is to use iteration again as in the view_contacts() function but instead of just printing each name as it cycles through the list, the program will only print out names and their email/phone number if it matches the user's input.
 # My first attempt did not work because it ended up printing both the contact info and the "that contact does not exist." given from the "else." I think this is because the function is still cycling even after outputting the information.
+# I fixed the issue using boolean variables to check if a name is on the list and basing the output on whether true or false. However when I tested this twice, the originally printed output does not change to match what the user is searching for.
+# I need to find a way to change the output to match what the user is searching for. 
 def search_contact():
     search_name = input("Please type the name of the contact you are searching for: ")
     in_list = False
