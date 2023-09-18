@@ -75,4 +75,10 @@ Good luck, and enjoy working on this assignment! If you have any questions or ne
 
 
 Readme Summary of python_program_three:
-
+    For this program I used the instructions to "set up" everything for me. It laid out a roadmap of the three different functions my program needed to perform. I first started by creating an empty Contacts[] list
+and figuring out how to add a dictionary entry into it. My comments in the python_program_three describe my thought process. As I continued writing this program and adding more and more comments, it eventually became
+too clustered and kind of messy, especially when I needed to move big chunks of code around. The reason for moving chunks of code around was because I realized later on that certain functions needed to be run at the beginning
+so the program can initialize them. 
+    The add_contact() function was the first and easiest function to add for more. It allows the user to add a new contact along with their email and phone numbers through several prompts. I later added the functionality of giving the user the choice of 
+adding another contact. The view_contacts() function allows the user to simply view all the names of contacts currently saved. The search_contact() was the most difficult for me to program but after some trial and error, I was able to get it functioning 
+the way I wanted it to. It allows the user to search for a contact by name and will return with that contact's email and phone number if it is in the system. If not, it will send the user back to the main menu. The main menu gives the user 4 options: view all contacts, search contacts, add a new contact, or exit the program. If a user at any time types out an invalid input, the program will let the user know and bring them back to the main menu.  
